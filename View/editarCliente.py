@@ -11,7 +11,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_EditarCliente(object):
+class EditarCliente(object):
     def setupUi(self, EditarCliente):
         EditarCliente.setObjectName("EditarCliente")
         EditarCliente.resize(1280, 720)
@@ -303,6 +303,16 @@ class Ui_EditarCliente(object):
         self.retranslateUi(EditarCliente)
         QtCore.QMetaObject.connectSlotsByName(EditarCliente)
 
+        nome = self.lineEdit_user.text()
+        cpf = self.lineEdit_user_2.text()
+        data_nascimento = self.lineEdit_user_3.text()
+        endereco = self.lineEdit_user_5.text()
+        cidade = self.lineEdit_user_4.text()
+        estado = self.lineEdit_user_6.text()
+        telefone = self.lineEdit_user_8.text()
+        email = self.lineEdit_user_7.text()
+        self.pushButton_enter.clicked.connection(update_item(nome, cpf, data_nascimento, endereco, cidade, estado, telefone, email))
+
     def retranslateUi(self, EditarCliente):
         _translate = QtCore.QCoreApplication.translate
         EditarCliente.setWindowTitle(_translate("EditarCliente", "EditarCliente"))
@@ -317,12 +327,25 @@ class Ui_EditarCliente(object):
         self.label.setText(_translate("EditarCliente", "Dados Pessoais"))
         self.pushButton_enter.setText(_translate("EditarCliente", "CONFIRMAR EDIÇÃO"))
 
+def update_item(self, nome, cpf, data_nascimento, endereco, cidade, uf, telefone, email):
+
+        from model import Model
+        from View.telaListagemClientes import TelaListagemClientes
+
+        con = Model()
+
+        con.update_item(nome, cpf, data_nascimento, endereco, cidade, uf, telefone, email)
+
+        con.disconnect()
+
+        TelaListagemClientes()
+
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     EditarCliente = QtWidgets.QMainWindow()
-    ui = Ui_EditarCliente()
+    ui = EditarCliente()
     ui.setupUi(EditarCliente)
     EditarCliente.show()
     sys.exit(app.exec_())
