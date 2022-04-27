@@ -9,6 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+import files_rc
 
 
 class Ui_DeletarCliente(object):
@@ -67,13 +68,3 @@ class Ui_DeletarCliente(object):
         DeletarCliente.setWindowTitle(_translate("DeletarCliente", "MainWindow"))
         self.label.setText(_translate("DeletarCliente", "EXCLUIR CLIENTE POR CPF:"))
         self.pushButton_botaoConfirmar.setText(_translate("DeletarCliente", "Confirmar"))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    DeletarCliente = QtWidgets.QMainWindow()
-    ui = Ui_DeletarCliente()
-    ui.setupUi(DeletarCliente)
-    DeletarCliente.show()
-    sys.exit(app.exec_())

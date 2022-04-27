@@ -9,6 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+import files_rc
 
 
 class Ui_TelaListagemClientes(object):
@@ -89,7 +90,6 @@ class Ui_TelaListagemClientes(object):
         self.tableWidget_TabelaPessoas.setColumnWidth(0, 375)
         self.tableWidget_TabelaPessoas.setColumnWidth(1, 435)
         self.tableWidget_TabelaPessoas.setColumnWidth(2, 225)
-        self.loadDataTabela()
 
 
         item = QtWidgets.QTableWidgetItem()
@@ -132,89 +132,3 @@ class Ui_TelaListagemClientes(object):
         item.setText(_translate("TelaListagemClientes", "E-Mail"))
         item = self.tableWidget_TabelaPessoas.horizontalHeaderItem(2)
         item.setText(_translate("TelaListagemClientes", "Telefone"))
-
-
-    def loadDataTabela(self):
-        pessoas = [
-            {
-                'nome': 'amongus',
-                'telefone': '(67) 99323-5472',
-                'email': 'amongus@gmail.com'
-            },
-            {
-                'nome': 'paulo',
-                'telefone': '(67) 99388-5452',
-                'email': 'paulo@gmail.com'
-            },
-            {
-                'nome': 'simone',
-                'telefone': '(67) 98288-4455',
-                'email': 'simone@gmail.com'
-            },
-            {
-                'nome': 'rafael',
-                'telefone': '(67) 91234-5678',
-                'email': 'gabriel@gmail.com'
-            },
-            {
-                'nome': 'amanda',
-                'telefone': '(67) 98765-4321',
-                'email': 'amanda@gmail.com'
-            },
-            {
-                'nome': 'caio',
-                'telefone': '(67) 99344-5444',
-                'email': 'caio@gmail.com'
-            },
-            {
-                'nome': 'rafael',
-                'telefone': '(67) 91234-5678',
-                'email': 'gabriel@gmail.com'
-            },
-            {
-                'nome': 'amanda',
-                'telefone': '(67) 98765-4321',
-                'email': 'amanda@gmail.com'
-            },
-            {
-                'nome': 'caio',
-                'telefone': '(67) 99344-5444',
-                'email': 'caio@gmail.com'
-            },
-            {
-                'nome': 'rafael',
-                'telefone': '(67) 91234-5678',
-                'email': 'gabriel@gmail.com'
-            },
-            {
-                'nome': 'amanda',
-                'telefone': '(67) 98765-4321',
-                'email': 'amanda@gmail.com'
-            },
-            {
-                'nome': 'caio',
-                'telefone': '(67) 99344-5444',
-                'email': 'caio@gmail.com'
-            },
-        ]
-        
-        row = 0
-        self.tableWidget_TabelaPessoas.setRowCount(len(pessoas))
-        
-        for pessoa in pessoas:
-            self.tableWidget_TabelaPessoas.setRowHeight(row, 50)
-            self.tableWidget_TabelaPessoas.setItem(row, 0, QtWidgets.QTableWidgetItem(pessoa['nome']))
-            self.tableWidget_TabelaPessoas.setItem(row, 1, QtWidgets.QTableWidgetItem(pessoa['email']))
-            self.tableWidget_TabelaPessoas.setItem(row, 2, QtWidgets.QTableWidgetItem(pessoa['telefone']))
-            row = row + 1
-
-import files_rc
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    TelaListagemClientes = QtWidgets.QMainWindow()
-    ui = Ui_TelaListagemClientes()
-    ui.setupUi(TelaListagemClientes)
-    TelaListagemClientes.show()
-    sys.exit(app.exec_())
