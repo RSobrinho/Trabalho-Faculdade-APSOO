@@ -1,7 +1,6 @@
-from view import View
+import ViewCadastrar, ViewDeletar, ViewEditar, ViewListar, ViewSelectEditarCliente, files_rc, model, controller
+from PyQt5 import QtCore, QtGui, QtWidgets
 
-view = View()
+control = controller.Controller()
 
-view.listar()
-
-# FALTA GERAR O PYTHON DA TELA selectEditarCliente E CONFERIR NOMES DAS LABELS E BOTOES
+control.listar()
