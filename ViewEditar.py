@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'cadastrarCliente.ui'
+# Form implementation generated from reading ui file 'editarCliente.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -9,13 +9,16 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+import files_rc
 
 
-class Ui_CadastroCliente(object):
-    def setupUi(self, CadastroCliente):
-        CadastroCliente.setObjectName("CadastroCliente")
-        CadastroCliente.resize(1281, 720)
-        self.centralwidget = QtWidgets.QWidget(CadastroCliente)
+class EditarCliente(object):
+
+
+    def setupUi(self, EditarCliente):
+        EditarCliente.setObjectName("EditarCliente")
+        EditarCliente.resize(1280, 720)
+        self.centralwidget = QtWidgets.QWidget(EditarCliente)
         self.centralwidget.setMinimumSize(QtCore.QSize(1280, 720))
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
@@ -277,7 +280,7 @@ class Ui_CadastroCliente(object):
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.frame_4)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.pushButton_enter = QtWidgets.QPushButton(self.frame_4)
-        self.pushButton_enter.setMaximumSize(QtCore.QSize(230, 60))
+        self.pushButton_enter.setMaximumSize(QtCore.QSize(260, 60))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(1)
@@ -298,32 +301,21 @@ class Ui_CadastroCliente(object):
         self.verticalLayout_2.addWidget(self.frame_4)
         self.horizontalLayout.addWidget(self.frame)
         self.verticalLayout.addWidget(self.frame_whiteRectangle)
-        CadastroCliente.setCentralWidget(self.centralwidget)
+        EditarCliente.setCentralWidget(self.centralwidget)
 
-        self.retranslateUi(CadastroCliente)
-        QtCore.QMetaObject.connectSlotsByName(CadastroCliente)
+        self.retranslateUi(EditarCliente)
+        QtCore.QMetaObject.connectSlotsByName(EditarCliente)
 
-    def retranslateUi(self, CadastroCliente):
+    def retranslateUi(self, EditarCliente):
         _translate = QtCore.QCoreApplication.translate
-        CadastroCliente.setWindowTitle(_translate("CadastroCliente", "CadastroCliente"))
-        self.lineEdit_user.setPlaceholderText(_translate("CadastroCliente", "Nome"))
-        self.lineEdit_user_2.setPlaceholderText(_translate("CadastroCliente", "CPF"))
-        self.lineEdit_user_3.setPlaceholderText(_translate("CadastroCliente", "Data de nascimento"))
-        self.lineEdit_user_4.setPlaceholderText(_translate("CadastroCliente", "Cidade"))
-        self.lineEdit_user_5.setPlaceholderText(_translate("CadastroCliente", "Endereço"))
-        self.lineEdit_user_6.setPlaceholderText(_translate("CadastroCliente", "Estado"))
-        self.lineEdit_user_7.setPlaceholderText(_translate("CadastroCliente", "E-Mail"))
-        self.lineEdit_user_8.setPlaceholderText(_translate("CadastroCliente", "Telefone"))
-        self.label.setText(_translate("CadastroCliente", "Dados Pessoais"))
-        self.pushButton_enter.setText(_translate("CadastroCliente", "CADASTRAR"))
-import files_rc
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    CadastroCliente = QtWidgets.QMainWindow()
-    ui = Ui_CadastroCliente()
-    ui.setupUi(CadastroCliente)
-    CadastroCliente.show()
-    sys.exit(app.exec_())
+        EditarCliente.setWindowTitle(_translate("EditarCliente", "EditarCliente"))
+        self.lineEdit_user.setPlaceholderText(_translate("EditarCliente", "Nome"))
+        self.lineEdit_user_2.setPlaceholderText(_translate("EditarCliente", "CPF"))
+        self.lineEdit_user_3.setPlaceholderText(_translate("EditarCliente", "Data de nascimento"))
+        self.lineEdit_user_4.setPlaceholderText(_translate("EditarCliente", "Cidade"))
+        self.lineEdit_user_5.setPlaceholderText(_translate("EditarCliente", "Endereço"))
+        self.lineEdit_user_6.setPlaceholderText(_translate("EditarCliente", "Estado"))
+        self.lineEdit_user_7.setPlaceholderText(_translate("EditarCliente", "E-Mail"))
+        self.lineEdit_user_8.setPlaceholderText(_translate("EditarCliente", "Telefone"))
+        self.label.setText(_translate("EditarCliente", "Dados Pessoais"))
+        self.pushButton_enter.setText(_translate("EditarCliente", "CONFIRMAR EDIÇÃO"))
